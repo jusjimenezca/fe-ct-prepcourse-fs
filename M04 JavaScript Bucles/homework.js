@@ -32,9 +32,9 @@ function conection(status) {
    // Retornar el estado de conexión del usuario.
    // Tu código:
    if(status == 1){
-      return "el usuario está Online"
+      return "Online"
    }else if (status == 2){
-      return "el usuario está Away"
+      return "Away"
    }else{
       return "Offline"
 
@@ -123,12 +123,12 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
-   if (num % 3 == 0){
+   if (num % 3 == 0 && num % 5 == 0){
+      return "fizzbuzz"
+   }else if (num % 3 == 0){
       return "fizz"
    }else if (num % 5 == 0){
       return "buzz"
-   }else if(num % 3 == 0 && num % 5 == 0){
-      return "fizzbuzz"
    }else{
       return false
    }
@@ -142,10 +142,10 @@ function operadoresLogicos(num1, num2, num3) {
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
-   if (num1 > num2 && num1 > num3 && num1 > 1){
-      return "Numero 1 es mayor y positivo"
-   }else if (num1 < 0 && num2 < 0 && num3 < 0){
+   if (num1 < 0 || num2 < 0 || num3 < 0){
       return "Hay negativos"
+   }else if (num1 > num2 && num1 > num3 & num1 > 1) {
+      return "Numero 1 es mayor y positivo"
    }else if (num3 > num1 && num3 > num2){
       return num3 + 1
    }else if (num1 === 0 && num2 === 0 && num3 === 0){
@@ -165,13 +165,14 @@ function esPrimo(num) {
    if (num <= 1){
       return false
    }
-   for (var i = 2; i<= Math.sqrt(num); i++){
+   for (let i = 2; i<= Math.sqrt(num); i++){
 
        if (num % i === 0){
       return false
    }
-   return true
+   
 }
+      return true
 }
 
 
@@ -203,6 +204,12 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   let contador = 0
+   do{
+      num +=5
+      contador++
+   }while (contador < 8)
+   return num
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
