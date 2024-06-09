@@ -229,7 +229,8 @@ function breakStatement(num) {
       nuevoArreglo.push(num);
 
       if (num === i){
-         break
+         return "Se interrumpió la ejecución"
+         
        
       }
    }
